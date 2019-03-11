@@ -3,7 +3,6 @@ saida = []
 arq = open('input.txt', 'r+')
 texto =arq.readlines()
 
-
 for instrucao in texto:
       op=int(instrucao[0:6],2)
       rs=int(instrucao[6:11],2)
@@ -301,8 +300,6 @@ elif op==40 and imm ==0:
   imm="SB"
   textoutput.append("{} ${} ${} ".format(imm,rs,rt))
 
-
-
 elif op==56 and imm ==0:
   imm="SC"
   textoutput.append("{} ${} ${} ".format(imm,rs,rt))
@@ -310,7 +307,6 @@ elif op==56 and imm ==0:
 elif op==51 and imm ==0:
   imm="SCD"
   textoutput.append("{} ${} ${} ".format(imm,rs,rt))
-
 
 elif op==63 and imm ==0:
   imm="SD"
@@ -324,7 +320,6 @@ elif op==45 and imm ==0:
   imm="SDR"
   textoutput.append("{} ${} ${} ".format(imm,rs,rt))
 
-
 elif op==41 and imm ==0:
   imm="SH"
   textoutput.append("{} ${} ${} ".format(imm,rs,rt))
@@ -337,11 +332,9 @@ elif op==0 and funct ==4:
   funct="SLLV"
   textoutput.append("{} ${} ${} ${} ".format(funct,rd,rs,rt))
 
-
 elif op==0 and funct ==41:
   funct="SLT"
   textoutput.append("{} ${} ${} ${} ".format(funct,rd,rs,rt))
-
 
 elif op==10 and imm ==0:
   imm="SLTI"
@@ -350,8 +343,6 @@ elif op==10 and imm ==0:
 elif op==11 and imm ==0:
   imm="SLTIU"
   textoutput.append("{} ${}  ${} ".format(imm,rs,rt))
-
-
 
 elif op==0 and funct ==43:
   funct="SLTU"
@@ -365,7 +356,6 @@ elif op==0 and funct ==7:
   funct="SRAV"
   textoutput.append("{} ${} ${} ${} ".format(funct,rd,rs,rt))
 
-
 elif op==0 and funct ==2:
   funct="SRL"
   textoutput.append("{} ${} ${} ${} ".format(funct,rd,rs,rt))
@@ -373,7 +363,6 @@ elif op==0 and funct ==2:
 elif op==0 and funct ==5:
   funct="SRLV"
   textoutput.append("{} ${} ${} ${} ".format(funct,rd,rs,rt))
-
 
 elif op==0 and funct ==34:
   funct="SUB"
@@ -387,7 +376,6 @@ elif op==43 and imm ==0:
   imm="Sw"
   textoutput.append("{} ${} ${}  ".format(imm,rs,rt))
 
-
 elif op==44 and imm ==0:
   imm="SWL"
   textoutput.append("{} ${} ${}  ".format(imm,rs,rt))
@@ -396,7 +384,6 @@ elif op==46 and imm ==0:
   imm="SWR"
   textoutput.append("{} ${} ${}  ".format(imm,rs,rt))
 
-
 elif op==0 and funct ==12:
   funct="SYSCALL"
   textoutput.append("{} ${} ".format(funct,rd,rs,rt))
@@ -404,7 +391,6 @@ elif op==0 and funct ==12:
 elif op==0 and funct ==52:
   funct="TEQ"
   textoutput.append("{} ${} ${} ${} ".format(funct,code,rs,rt))
-
 
 elif op==1 and rt ==0:
   rt="TEQI"
@@ -453,7 +439,6 @@ elif op==0 and funct ==34:
 elif op==0 and imm ==35:
   imm="subu"
   textoutput.append("{} ${} ${} ${} ".format(imm,rs,rt))
-
 
 print("Converting binary to Assembly ...")
 arq_saida = open('saida.txt', 'w')
