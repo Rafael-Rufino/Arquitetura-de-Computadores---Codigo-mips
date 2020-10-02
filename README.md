@@ -3,4 +3,6 @@
 
 
 **Condigo em python**
-Converter extresoes de assembly para para python, tradução de binario para decimal e vice e versa.
+
+
+Converter extresoes de assembly para python, tradução de binario para decimal e vice e versa.
